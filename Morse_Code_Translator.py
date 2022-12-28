@@ -2,7 +2,9 @@ import RPi.GPIO as GPIO
 import time
 
 output_pin = 14
-GPIO.setmode(GPIO.BCM)
+# Telling the Pi what that the ping is the GPIO pin not the board pin
+GPIO.setmode(GPIO.BCM)i
+# Tell ing the Pi that the pin is outputing
 GPIO.setup(output_pin, GPIO.OUT)
 
 print("This turns text into morse code!!")
@@ -43,6 +45,7 @@ while True:
             # and 2 indicates different words
             cipher += ' '
 
+    # Does a check to see what set of actions the Pi should take for that code
     for element in range(0, len(cipher)):
         if cipher[element] == '.':
             GPIO.output(output_pin, GPIO.HIGH)
