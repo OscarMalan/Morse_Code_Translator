@@ -3,7 +3,7 @@ import time
 
 output_pin = 14
 # Telling the Pi what that the ping is the GPIO pin not the board pin
-GPIO.setmode(GPIO.BCM)i
+GPIO.setmode(GPIO.BCM)
 # Tell ing the Pi that the pin is outputing
 GPIO.setup(output_pin, GPIO.OUT)
 
